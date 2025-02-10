@@ -2,10 +2,10 @@ export type NotificationType =
   | 'FOLLOW'
   | 'FEED_LIKE'
   | 'FEED_COMMENT'
-  | 'FEED_ANSWER'
+  | 'FEED_REPLY'
   | 'FEED_MENTION'
   | 'POST_COMMENT'
-  | 'POST_ANSWER'
+  | 'POST_REPLY'
   | 'POST_MENTION';
 
 export type Actor = {
@@ -31,8 +31,8 @@ export type FeedCommentData = {
   actor: Actor;
 };
 
-export type FeedAnswerData = {
-  type: 'FEED_ANSWER';
+export type FeedReplyData = {
+  type: 'FEED_REPLY';
   feedId: string;
   actor: Actor;
 };
@@ -49,8 +49,8 @@ export type PostCommentData = {
   actor: Actor;
 };
 
-export type PostAnswerData = {
-  type: 'POST_ANSWER';
+export type PostReplyData = {
+  type: 'POST_REPLY';
   postId: string;
   actor: Actor;
 };
@@ -65,8 +65,8 @@ export type NotificationData =
   | FollowData
   | FeedLikeData
   | FeedCommentData
-  | FeedAnswerData
+  | FeedReplyData
   | FeedMentionData
   | PostCommentData
-  | PostAnswerData
+  | PostReplyData
   | PostMentionData;
