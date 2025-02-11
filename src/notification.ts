@@ -23,6 +23,8 @@ export type FeedLikeData = {
   type: 'FEED_LIKE';
   feedId: string;
   likeCount: number;
+  thumbnail: string;
+  title: string;
 };
 
 export type FeedCommentData = {
